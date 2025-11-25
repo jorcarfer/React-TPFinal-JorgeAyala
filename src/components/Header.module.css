@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&family=Pirata+One&display=swap');
+
+.header2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+
+.navbarContainer2 {
+  flex-basis: 20%; 
+  text-align: left;
+}
+
+.iconsContainer {
+
+  display: flex;
+  justify-content: flex-end; 
+  
+}
+
+.iconoDeCarrito {
+  position: relative;
+  cursor: pointer;
+}
+
+.contadorDeCarrito {
+  position: absolute;
+  top: -8px; 
+  right: -10px; 
+  background-color: rgb(11, 11, 11);
+  color: white;
+  border-radius: 50%;
+  padding: 3px 6px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1;
+}
+.boton {
+    background: goldenrod;
+    padding: 5px 10px;
+    color: black;
+    border: 3px solid black;
+    border-radius: 2px;
+    text-shadow: none;
+}
+
+.boton:hover {
+    background: white;
+    color: black;
+    border: 3px solid goldenrod;
+    border-radius: 2px;
+    }
+
+.icono {
+  font-size: 28px;
+  cursor: pointer;
+  color: goldenrod;
+  margin: 0;
+}
+
+.login {
+ /* font-family: "Lucida Console", Courier, monospace;
+  color: goldenrod;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+  text-decoration: none;
+  margin: 5px 20px  0px;*/
+ background: goldenrod;
+    padding: 5px 10px;
+    color: black;
+    border: 3px solid black;
+    border-radius: 2px;
+    text-shadow: none;
+}
+.login:hover {
+    background: white;
+    color: black;
+    border: 3px solid goldenrod;
+    border-radius: 2px;
+    }
+
+.lista {
+    display: flex; 
+    justify-content: space-around; 
+    list-style: none; 
+    padding: 10px;
+    margin: 0;
+    background-color: black;
+    border-color: goldenrod;
+    border: 3px;
+    border-radius: 6px;
+    border-style: groove;
+  }
+
+  
+  .item {
+    margin: 0px; 
+  }
+  
+  .link2 {
+    text-decoration: none;
+    color: goldenrod;
+    font-size: 20px;
+    margin: 0;
+  
+  }
+  
+  .link2:hover {
+    color: goldenrod; 
+    border-bottom: 2px solid white; 
+  }
+

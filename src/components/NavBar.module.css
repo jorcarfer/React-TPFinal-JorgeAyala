@@ -1,0 +1,30 @@
+.lista {
+    display: flex; 
+    justify-content: space-around; 
+    list-style: none; 
+    padding: 10px;
+    margin: 0;
+    background-color: black;
+    border-color: goldenrod;
+    border: 3px;
+    border-radius: 6px;
+    border-style: groove;
+  }
+
+  
+  .item {
+    margin: 0px; 
+  }
+  
+  .link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 60px; 
+    margin: 0;
+  
+  }
+  
+  .link:hover {
+    color: goldenrod; 
+  }

@@ -1,0 +1,29 @@
+.agregar {
+    background: goldenrod;
+    padding: 5px 10px;
+    color: black;
+    border: 3px solid black;
+    border-radius: 2px;
+    text-shadow: none;
+}
+
+.agregar:hover {
+    background: white;
+    color: black;
+    border: 3px solid goldenrod;
+    border-radius: 2px;
+    }
+
+
+.link {
+    text-decoration: none;
+    color: goldenrod;
+    font-size: 20px;
+    padding: 5px 0; 
+    margin: 0 10px;
+  }
+  
+  .link:hover {
+    color:black; 
+   
+  }

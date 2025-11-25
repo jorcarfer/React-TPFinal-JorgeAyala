@@ -1,0 +1,23 @@
+.contacto{
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 0 auto;
+    padding-left: 20px;
+    border: darkgoldenrod 3px solid;
+    background-color: black;
+    border-radius: 6%;
+    color: goldenrod;
+     
+
+}
+
+.h4{
+
+    color: darkgoldenrod;
+}
+

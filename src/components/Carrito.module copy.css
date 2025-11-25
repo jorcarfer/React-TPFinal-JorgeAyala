@@ -1,0 +1,56 @@
+.carrito{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-content: start;
+    align-items: top ;
+    background-color: lightgoldenrodyellow;
+    justify-content: space-evenly;
+    padding: 10px;
+    border: 0%;
+    margin: 0%;
+}
+
+.prod{
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-align: center;
+    background: white;
+    padding: 5px 10px;
+    color: black;
+    border: 3px solid goldenrod;
+    border-radius: 2px;
+    text-shadow: none;
+     padding: 5px;
+        margin: 1%;
+
+     /*display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        padding: 5px;
+        margin: 1%;*/
+
+
+}
+
+
+
+.boton {
+    background: goldenrod;
+    padding: 5px 10px;
+    color: black;
+    border: 3px solid black;
+    border-radius: 2px;
+    text-shadow: none;
+    align-items: center;
+    text-align: center;
+}
+
+.boton:hover {
+    background: white;
+    color: black;
+    border: 3px solid goldenrod;
+    border-radius: 2px;
+    }
