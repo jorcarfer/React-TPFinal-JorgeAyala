@@ -32,15 +32,19 @@ margin: 5px;
     align-items: stretch;
 }
 
+
 .prod{
- margin: 1%;
-        align-items: stretch;
+        display: flex;
+        margin: 1%;
+        align-items: center;
         width:90%;
         border: darkgoldenrod 3px solid;
-        text-align: center;
+        -ms-flex-item-align: center;
         border-radius: 5px;
         padding: 5px;
         flex-basis: 100%;
+        flex-direction: column;
+        background-color: white;
 
 }
 .prod:hover {

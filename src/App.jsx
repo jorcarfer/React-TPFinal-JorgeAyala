@@ -10,7 +10,7 @@ import Contacto from './pages/Contacto';
 import Inicio from './pages/Inicio.jsx';
 
 import Header from './components/Header.jsx'
-import Main from './components/Main.jsx'
+//import MainNO from './components/MainNO.jsx'
 import Footer from './components/Footer.jsx'
 
 import Login from './pages/Login.jsx'
@@ -29,12 +29,11 @@ function App() {
   return (
     <>
       <Header />
-
-      <Main />
       <Routes>
+        <Route path='/' element={<Inicio/>}/> 
+        <Route path='/Inicio' element={<Inicio/>}/> 
         <Route path='/InicioProd' element={<InicioProd/>}/> 
         <Route path='/Mecedora' element={<Mecedora/>}/> 
-        <Route path='/Inicio' element={<Inicio/>}/> 
         <Route path='/productos/:id' element={<ProductoDetalle/>}/>
         <Route path='/contacto' element={<Contacto/>}/> 
         <Route path={'/login'} element={<Login/>} />

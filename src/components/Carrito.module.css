@@ -22,33 +22,15 @@
 }
 
 .prod{
-  display: grid;
-  grid-template-columns: 1fr 4fr 1fr 1fr;
+ /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: #f9f9f9; /* Un color de fondo claro */
-  padding: 3px;
+ /* padding: 3px;
   width: 100%; /* Ancho del formulario */
-  margin: 3px auto; /* Centrado en la página */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  align-items: center;
-  justify-content: space-between;
-/*display: flex;
-justify-content: space-between;
-align-items: center;
-text-align: center;
-    background: white;
-    padding: 5px 10px;
-    color: black;
-    border: 3px solid goldenrod;
-    border-radius: 2px;
-    text-shadow: none;
-     padding: 5px;
-        margin: 1%;
-
-     display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto;
-        padding: 5px;
-        margin: 1%;*/
+ /* margin: 3px auto; /* Centrado en la página */
+ /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+ /* align-items: center;
+  justify-content: space-between;*/
 
 
 }
