@@ -13,22 +13,23 @@ const Header = () => {
   const contadorEnCarrito = carrito.length;
 
   return (
-    <header className={styles.header}>
+    <header style={{ backgroundColor: "white", padding: "10px",
+textAlign: "center", color: "goldenrod" }}>
    
 
       <div className={styles.cont}>
-      
-      <img src="https://jorcarfer.github.io/Jctapiceria/Imagenes/JC%20Tapiceria%20Logo.png" alt="Descripcion cuando no aparece la foto"  width="200px"></img>
+                  <div>
+                  <img src="https://jorcarfer.github.io/Jctapiceria/Imagenes/JC%20Tapiceria%20Logo.png" alt="Descripcion cuando no aparece la foto"  width="200px"></img>
       </div>
       
 
-     <div><Navbar /></div>
+   
    
      
       {/* Seccion Derecha: Iconos */}
       <div className={styles.iconsContainer}>
-        
-        
+        <Navbar />
+        <div className={styles.botones}>
         { estaLogeado ? 
           <button onClick={logout} className={styles.logout}>LogOut</button> 
           :
@@ -48,8 +49,8 @@ const Header = () => {
           </Link>
         </div>
         </div>
-      
-      
+      </div>
+      </div>
     </header>   
   );
 };

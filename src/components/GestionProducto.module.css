@@ -6,6 +6,7 @@
     border: 3px solid black;
     border-radius: 2px;
     text-shadow: none;
+     column-gap: 0%;
 
 }
 .imagen {
@@ -25,7 +26,7 @@
 
 .boton {
     background: goldenrod;
-    padding: 3px 5px;
+    padding: 1px 3px;
     color: black;
     border: 3px solid black;
     border-radius: 2px;
@@ -55,11 +56,12 @@
 
 .botonAgr {
     background: goldenrod;
-    padding: 1%;
+    padding: 5px 5px;
     color: black;
     border: 3px solid black;
     border-radius: 2px;
     text-shadow: none;
+    font-size: 15px;
 }
 
 .botonAgr:hover {

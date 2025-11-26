@@ -41,7 +41,7 @@ const GestionProductos = () => {
       <div>
         
         <div className={styles.cabecera}>
-         <div>  <h2>Lista de Productos</h2></div>
+         <h2>Lista de Productos</h2>
         {/* Botón para agregar producto */}
         <div>
         <button
@@ -49,7 +49,7 @@ const GestionProductos = () => {
           className={styles.botonAgr}
         >
           <CirclePlus />
-          <h4>Agregar Producto</h4>
+          <p>Agregar Producto</p>
         </button>
         </div>
         </div>
