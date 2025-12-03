@@ -20,7 +20,7 @@ const Productos2 = () => {
   return(
       
     <div>
-      <h2>Mecedoras</h2>
+      <h2 className="text-2xl font-semibold tracking-tight text-balance text-yellow-500 sm:text-3xl">Mecedoras</h2>
       <div className={Styles.cont1}>
           {prodCat.map((producto) => (
             <div  key={producto.id}>

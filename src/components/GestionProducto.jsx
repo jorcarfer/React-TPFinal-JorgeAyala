@@ -48,7 +48,7 @@ const GestionProductos = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-        <h2 className="text-3xl font-bold text-gray-900">Lista de Productos</h2>
+        <h2 className="text-4xl font-semibold tracking-tight text-balance text-grey-600 sm:text-2xl">Lista de Productos</h2>
         <button
           onClick={abrirFormularioAgregar}
           className="flex items-center justify-center gap-2 px-6 py-3 rounded-md font-semibold transition-colors duration-200"
