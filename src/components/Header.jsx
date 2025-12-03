@@ -51,7 +51,7 @@ const Header = () => {
         </div>
 
         {/* Seccion Derecha: Iconos */}
-        <div className="flex items-center gap-3 md:gap-4">
+        <div className="flex items-center gap-1 md:gap-1">
            {/* Barra de Busqueda */}
           <BarraBusqueda />
           {/* Verifica si alguien esta logeado */}
@@ -117,9 +117,7 @@ const Header = () => {
         
         <div className="px-8 py-16 flex flex-col gap-12 min-h-screen">
           {/* Logo en el menu en celular */}
-          <div className="text-5xl font-['Pirata_One'] text-white text-center mb-4">
-            ONE PIECE
-          </div>
+          <img src="https://jorcarfer.github.io/Jctapiceria/Imagenes/JC%20Tapiceria%20Logo.png" alt="Descripcion cuando no aparece la foto"  width="200px"></img>
 
           {/* Navbar en celular */}
           <div className="flex flex-col" onClick={cerrarMenu}>
