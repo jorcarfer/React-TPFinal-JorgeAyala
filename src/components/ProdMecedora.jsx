@@ -5,6 +5,7 @@ import { CarritoContext } from '../context/CarritoContext';
 import { useProductosContext } from "../context/ProductosContext";
 import Styles from './Productos.module.css'
 import Boton from './Botones.module.css'
+import { useState } from "react";
 
 const Productos2 = () => {
    
@@ -14,15 +15,28 @@ const Productos2 = () => {
 
   const prodCat = productos.filter((producto, indice) => producto.categoria.includes('Mecedor'))
 
+ // Logica de Paginacion 
+  const productosPorPagina = 8; 
+  const [paginaActual, setPaginaActual] = useState(1);
+
   if (cargando) return 'Cargando productos...';
   if (error) return error;
+
+  // Calcular el índice de los productos a mostrar en la página actual
+  const indiceUltimoProducto = paginaActual * productosPorPagina;
+  const indicePrimerProducto = indiceUltimoProducto - productosPorPagina;
+  const productosActuales = prodCat.slice(indicePrimerProducto, indiceUltimoProducto);
+
+  // Cambiar de pagina
+  const totalPaginas = Math.ceil(prodCat.length / productosPorPagina);
+  const cambiarPagina = (numeroPagina) => setPaginaActual(numeroPagina);
 
   return(
       
     <div>
       <h2 className="text-2xl font-semibold tracking-tight text-balance text-yellow-500 sm:text-3xl">Mecedoras</h2>
       <div className={Styles.cont1}>
-          {prodCat.map((producto) => (
+          {productosActuales.map((producto) => (
             <div  key={producto.id}>
               <div className={Styles.prod}>
                   <img src={producto.imagen} height={80} width={80}/>
@@ -38,6 +52,25 @@ const Productos2 = () => {
           </div>
           ))} 
       </div>  
+     {/* Paginador */}
+      <div className="flex justify-center gap-2 my-8">
+        {Array.from({ length: totalPaginas }, (_, indice) => (
+          <button
+            key={indice + 1}
+            className={`px-4 py-2 rounded ${
+              paginaActual === indice + 1 
+                ? "bg-black text-white" 
+                : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+            }`}
+            onClick={() => cambiarPagina(indice + 1)}
+          >
+            {indice + 1}
+          </button>
+        ))}
+      </div>
+    
+    
+    
     </div>
   );
 };
