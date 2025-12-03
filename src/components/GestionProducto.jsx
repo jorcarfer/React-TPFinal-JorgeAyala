@@ -82,7 +82,7 @@ const GestionProductos = () => {
 
                 {/* Información del producto */}
                 <div className="grow flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 w-full">
-                  <div className=" flex grow gap-50">
+                  <div className=" flex grow gap-30">
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
                       {producto.nombre}
                     </h3>
