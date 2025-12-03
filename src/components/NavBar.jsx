@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import styles from './NavBar.module.css'; 
 import { useAuthContext } from '../context/AuthContext';
 
 
@@ -11,19 +10,16 @@ const NavBar = () => {
   const noEsAdmin = !esAdmin;
 
     return(
-      <nav>
-        <ul className={styles.lista}>
-          <li className={styles.item}>
-            <Link to="/Inicio" className={styles.link}>Inicio</Link>
-            <Link to="/InicioProd" className={styles.link}>Productos</Link>
-            <Link to="/Mecedora" className={styles.link}>Mecedoras</Link>
-            <Link to="/contacto" className={styles.link}>Contacto</Link>
+      <nav className="backdrop-filter  sticky top-0 p-4">
+        <ul className="flex md:flex-row flex-col md:gap-10 gap-8 items-center md:items-center bg-transparent">
+          <li>
+            <Link to="/Inicio" className="text-black md:text-lg text-2xl font-medium hover:text-black transition-colors duration-200 hover:underline underline-offset-4">Inicio</Link>
+            <Link to="/InicioProd" className="text-gray-700 md:text-lg text-2xl font-medium hover:text-black transition-colors duration-200 hover:underline underline-offset-4">Productos</Link>
+            <Link to="/Mecedora" className="text-gray-700 md:text-lg text-2xl font-medium hover:text-black transition-colors duration-200 hover:underline underline-offset-4">Mecedoras</Link>
+            <Link to="/contacto" className="text-gray-700 md:text-lg text-2xl font-medium hover:text-black transition-colors duration-200 hover:underline underline-offset-4">Contacto</Link>
             {esAdmin && 
-              <Link to="/Admin" className={styles.link}>Admin</Link>
+              <Link to="/Admin" className="text-gray-700 md:text-lg text-2xl font-medium hover:text-black transition-colors duration-200 hover:underline underline-offset-4">Admin</Link>
             }
-               {/*      {noEsAdmin && 
-              <Link to="/Inicio" className={styles.link2}>NoAdmin</Link>
-            } */}
 
           </li>
         </ul>
