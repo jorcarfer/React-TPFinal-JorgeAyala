@@ -7,7 +7,7 @@ import Styles from './Productos.module.css'
 import Boton from './Botones.module.css'
 
 const Productos2 = () => {
-  
+   
   // Usamos los contextos 
   const { productos, setSelectedProductId, cargando, error } = useProductosContext();
   const { agregarAlCarrito } = useContext(CarritoContext);
