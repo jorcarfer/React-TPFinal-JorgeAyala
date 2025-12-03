@@ -103,7 +103,7 @@ const Header = () => {
 
       {/* Menu Movil Fullscreen */}
       <div 
-        className={`fixed top-0 left-0 w-full h-screen bg-black z-100 overflow-y-auto transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 w-full h-screen bg-white z-100 overflow-y-auto transition-transform duration-300 ease-in-out ${
           menuAbierto ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
