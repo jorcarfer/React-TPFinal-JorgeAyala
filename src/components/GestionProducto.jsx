@@ -1,16 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import FormProducto from "./FormProducto";
 import { useProductosContext } from "../context/ProductosContext";
-import styles from "./GestionProducto.module.css";
 import CirclePlus from "../assets/CirclePlus";
 import SquarePen from "../assets/SquarePen";
 import TrashIcon from "../assets/TrashIcon";
 
-
 const GestionProductos = () => {
-  // Cargando contexto de producto
   const { productos, eliminarProducto } = useProductosContext();
-  // Estados 
   const [mostrarForm, setMostrarForm] = useState(false);
   const [modoFormulario, setModoFormulario] = useState("agregar");
   const [productoSeleccionado, setProductoSeleccionado] = useState(null);
@@ -19,14 +15,14 @@ const GestionProductos = () => {
   // Abrir formulario para AGREGAR
   const abrirFormularioAgregar = () => {
     setModoFormulario("agregar");
-    setProductoSeleccionado(null); // Sin producto inicial
+    setProductoSeleccionado(null);
     setMostrarForm(true);
   };
 
   // Abrir formulario para EDITAR
   const abrirFormularioEditar = (producto) => {
     setModoFormulario("editar");
-    setProductoSeleccionado(producto); // Pasar el producto a editar
+    setProductoSeleccionado(producto);
     setMostrarForm(true);
   };
 
@@ -36,12 +32,12 @@ const GestionProductos = () => {
     setProductoSeleccionado(null);
   };
 
-    // Confirmar eliminación
+  // Confirmar eliminación
   const confirmarEliminacion = (producto) => {
     setProductoAEliminar(producto);
   };
 
-    const handleEliminar = () => {
+  const handleEliminar = () => {
     if (productoAEliminar) {
       eliminarProducto(productoAEliminar.id);
       setProductoAEliminar(null);
@@ -49,61 +45,77 @@ const GestionProductos = () => {
   };
 
   return (
-    <div className={styles.container}>
-      
-      <div>
-        
-        <div className={styles.cabecera}>
-         <h2>Lista de Productos</h2>
-        {/* Botón para agregar producto */}
-        <div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+        <h2 className="text-3xl font-bold text-gray-900">Lista de Productos</h2>
         <button
           onClick={abrirFormularioAgregar}
-          className={styles.botonAgr}
+          className="flex items-center justify-center gap-2 px-6 py-3 rounded-md font-semibold transition-colors duration-200"
         >
-          <CirclePlus />
-          <p>Agregar Producto</p>
+          <CirclePlus className="w-5 h-5" />
+          <span>Agregar Producto</span>
         </button>
+      </div>
+
+      {/* Lista de productos */}
+      {productos.length === 0 ? (
+        <div className="bg-white border border-gray-200 rounded-lg p-12 text-center">
+          <p className="text-gray-600 text-lg">No hay productos</p>
         </div>
-        </div>
-        {/* Lista de productos */}
-        
-        <div>
-          {productos.length === 0 ? (
-            <p>No hay productos</p>
-          ) : (
-            <div>
-             
-              {productos.map((producto) => (
-                <div
-                  key={producto.id}
-                  className={styles.productoItem}
-                >
-                  <img className={styles.imagen} src={producto.imagen} alt={producto.nombre} />
-                  <h3>{producto.nombre}</h3>
-                  <p>Precio: ${producto.precio}</p>
-                  {/* Botones para editar y eliminar este producto */}
-                  <button 
-                    className={styles.boton} 
-                    onClick={() => abrirFormularioEditar(producto)}
-                  >
-                   <SquarePen />
-                  </button>
-                  <button 
-                    className={styles.boton} 
-                    /*onClick={() => eliminarProducto(producto.id)}*/
-                    onClick={() => confirmarEliminacion(producto)}
-                  >
-                   <TrashIcon />
-                  </button>
+      ) : (
+        <div className="space-y-4">
+          {productos.map((producto) => (
+            <div
+              key={producto.id}
+              className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 hover:shadow-md transition-shadow duration-200"
+            >
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
+                {/* Imagen del producto */}
+                <div className="flex-shrink-0 w-full sm:w-32">
+                  <img 
+                    src={producto.imagen} 
+                    alt={producto.nombre}
+                    className="w-full sm:w-32 sm:h-32 object-cover rounded-md"
+                  />
                 </div>
-              ))}
+
+                {/* Información del producto */}
+                <div className="grow flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 w-full">
+                  <div className=" flex grow gap-50">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                      {producto.nombre}
+                    </h3>
+                    <p className="text-2xl font-bold text-gray-900">
+                      ${producto.precio?.toLocaleString('es-AR')}
+                    </p>
+                  </div>
+
+                  {/* Botones de editar y eliminar */}
+                  <div className="flex gap-3 sm:shrink-0">
+                    <button
+                      onClick={() => abrirFormularioEditar(producto)}
+                      className="flex items-center justify-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-md font-medium hover:bg-gray-800 transition-colors duration-200"
+                    >
+                      <SquarePen className="w-4 h-4" />
+                      <span className="text-sm">Editar</span>
+                    </button>
+                    <button
+                      onClick={() => confirmarEliminacion(producto)}
+                      className="flex items-center justify-center bg-black text-red-600 px-3 py-2 rounded-md hover:bg-red-100 transition-colors duration-200"
+                    >
+                      <TrashIcon className="w-5 h-5" />
+                      <span className="text-sm">Eliminar</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-          )}
+          ))}
         </div>
+      )}
 
-
- {/* Modal de confirmacion de eliminar */}
+      {/* Modal de confirmacion de eliminar */}
       {productoAEliminar && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-lg max-w-md w-full p-6 shadow-xl">
@@ -143,20 +155,14 @@ const GestionProductos = () => {
         </div>
       )}
 
-
-
-        {/* Modal - Formulario condicional */}
-        {mostrarForm && (
-          <>
-              {/* Pasar los props correctos según el modo */}
-              <FormProducto
-                productoInicial={productoSeleccionado || {}}
-                modo={modoFormulario}
-                onCerrar={cerrarFormulario}
-              />
-          </>
-        )}
-      </div>
+      {/* Modal - Formulario */}
+      {mostrarForm && (
+        <FormProducto
+          productoInicial={productoSeleccionado || {}}
+          modo={modoFormulario}
+          onCerrar={cerrarFormulario}
+        />
+      )}
     </div>
   );
 };
