@@ -12,7 +12,7 @@ const NavBar = () => {
     return(
       <nav className="backdrop-filter  sticky top-0 p-4">
         <ul className="flex md:flex-row flex-col md:gap-10 gap-8 items-center md:items-center bg-transparent">
-          <li>
+          <li className="flex flex-wrap gap-10">
             <Link to="/Inicio" className="text-black md:text-lg text-2xl font-medium hover:text-black transition-colors duration-200 hover:underline underline-offset-4">Inicio</Link>
             <Link to="/InicioProd" className="text-gray-700 md:text-lg text-2xl font-medium hover:text-black transition-colors duration-200 hover:underline underline-offset-4">Productos</Link>
             <Link to="/Mecedora" className="text-gray-700 md:text-lg text-2xl font-medium hover:text-black transition-colors duration-200 hover:underline underline-offset-4">Mecedoras</Link>
