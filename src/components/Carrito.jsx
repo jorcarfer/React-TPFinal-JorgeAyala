@@ -171,7 +171,7 @@ const Carrito = () => {
               </div>
             </div>
             
-            <button className="w-full bg-yellow-500 text-yellow-500 py-3 px-4 rounded-md font-semibold hover:bg-yellow-500 transition-colors duration-200 mb-3">
+            <button className="w-full bg-yellow-500 text-white py-3 px-4 rounded-md font-semibold hover:bg-yellow-500 transition-colors duration-200 mb-3">
               Proceder al Pago
             </button>
             
