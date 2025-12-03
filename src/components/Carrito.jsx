@@ -42,7 +42,7 @@ const Carrito = () => {
           </svg>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Tu carrito está vacío</h2>
           <p className="text-gray-600 mb-6">¡Agregá productos para comenzar tu compra!</p>
-          <a href="/InicioProd" className="inline-block bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-[#333] transition-colors duration-200">
+          <a href="/" className="inline-block bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-[#333] transition-colors duration-200">
             Ir a comprar
           </a>
         </div>
